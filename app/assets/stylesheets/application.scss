@@ -1,0 +1,121 @@
+@import "scaffolds";
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+}
+
+.initial-page {
+
+  .login-banner-left {
+    width: auto;
+    max-height: 100%;
+    background-color: #ece9e9;
+    @media screen and ( max-width: 780px ) {
+      .login-banner-left {
+        display: none;
+      }
+    }
+  }
+
+  .login-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e75c67;
+    max-width: 100%;
+  }
+
+  .login-panel {
+    width: 60%;
+    padding: 42px;
+    border-radius: 12px;
+    background-color: #ece9e9;
+  }
+
+  .my-title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+    .the-title {
+      transform: rotate(-5deg);
+    }
+  }
+  .banner-1{
+    width: 100%;
+    max-height: 100%;
+  }
+
+  .remember-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    > label {
+      margin-right: 12px;
+      font-style: italic;
+      font-weight: bold;
+    }
+  }
+
+  .shared-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .submit-button {
+    > input {
+      width: 60%;
+    }
+    padding-bottom: 12px;
+  }
+}
+
+.button {
+  &.is-danger {
+    background-color: #fa5c5c !important;
+    &.is-outlined {
+      background-color: #f0f0f0 !important;
+    }
+    &.is-outlined:hover {
+      color: #f14668 !important;
+    }
+  }
+}
+
+.register-page{
+  background-color: #e75c67;
+  min-height: 100vh;
+
+  .register-block {
+    background-color: #ece9e9;
+    margin: 80px;
+    padding: 36px;
+    border-radius: 12px;
+  }
+  .register-links {
+    display: flex;
+    flex: 1;
+    align-content: center;
+    justify-content: flex-end;
+  }
+}
+
+.navbar-center {
+  display: flex;
+  align-items: stretch;
+  input {
+    width: 380px;
+  }
+  input:hover {
+    background-color: #99999950;
+  }
+}
