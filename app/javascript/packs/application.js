@@ -9,7 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("jquery")
 require("bulma")
-// require("bulmaswatch/slate/bulmaswatch.scss")
+require("bulmaswatch/materia/bulmaswatch.scss")
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -27,4 +27,12 @@ $(document).ready(function() {
         $(".navbar-menu").toggleClass("is-active");
 
     });
+
+    $('.file-input').change(e => {
+        if (e.target.files.length > 0) {
+            const fileData = e.target.files[0]
+            $('.file-name').text(fileData.name)
+        }
+    })
 });
+

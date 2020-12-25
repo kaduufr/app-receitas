@@ -15,6 +15,16 @@
     <%if user_signed_in? %>
       <%= render 'partials/menu' %>
     <%end %>
-    <%= yield %>
+    <% if controller.controller_name != 'sessions' && controller.controller_name != 'registrations' %>
+      <div class="row margin-top-24">
+        <div class="columns">
+          <div class="column is-offset-one-fifth-desktop is-three-fifths-desktop form-category">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    <% else %>
+      <%= yield %>
+    <% end %>
   </body>
 </html>

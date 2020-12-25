@@ -1,4 +1,4 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar is-info" role="navigation" aria-label="main navigation">
   <div class="container">
 
     <div class="navbar-brand">
@@ -15,31 +15,22 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        <div class="navbar-item">
-          <div class="buttons">
-            <%= link_to 'Receitas',recipes_path ,  class: 'button is-outlined is-primary' %>
-            <%= link_to 'Categorias', categories_path,  class: 'button is-outlined is-primary' %>
-          </div>
-        </div>
-      </div>
-<!--      <div class="navbar-center">-->
-<!--        <div class="navbar-item">-->
-<!--          <div class="control has-icons-left">-->
-<!--            <input class="input is-dark" type="text" placeholder="Pesquisa">-->
-<!--            <span class="icon is-small is-left">-->
-<!--                <i class="fas fa-search"></i>-->
-<!--            </span>-->
-<!--          </div>-->
-<!--        </div>-->
-
+        <%= link_to 'Receitas',recipes_path ,  class: 'navbar-item is-info' %>
+        <%= link_to 'Categorias', categories_path,  class: 'navbar-item is-info' %>
       </div>
       <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <%= link_to destroy_user_session_path, class: "button is-primary" do %>
+        <%= link_to root_path, class: "navbar-item is-info" do %>
               <span class="icon is-small is-left">
                   <i class="fas fa-search"></i>
               </span>
+        <% end %>
+        <div class="navbar-item">
+          <div class="buttons">
+            <%= link_to root_path, class: "button is-info" do %>
+              <span class="icon is-small is-left">
+                  <i class="far fa-user"></i>
+              </span>
+              <span>Perfil</span>
             <% end %>
             <%= link_to 'Sair', destroy_user_session_url, method: :delete, class: "button is-danger" %>
           </div>

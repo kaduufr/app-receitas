@@ -1,3 +1,67 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.category-header {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  .category-item {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    margin: 16px;
+  }
+  .category-img {
+    border-radius: 12px;
+  }
+  p.subtitle.is-6 {
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
+.category-table {
+  min-width: 300px;
+  width: 100%;
+  max-width: 100%;
+  min-height: 70%;
+  height: 100%;
+  max-height: 100%;
+
+  thead {
+    th {
+      font-size: 20px;
+    }
+  }
+
+  tbody {
+    tr {
+      padding: 8px;
+      a {
+        background-color: transparent !important;
+        i {
+          &.red{
+            color: #ff6363;
+          }
+          &.green {
+            color: #2eff65;
+          }
+          &.blue {
+            color: #3889ff;
+          }
+        }
+      }
+    }
+    td {
+      font-size: 16px;
+    }
+    td:first-child {
+      font-weight: bold;
+    }
+  }
+}

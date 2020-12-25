@@ -1,12 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Categories</h1>
+<div class="title">
+  <h1>Categories</h1>
+</div>
 
-<table>
+<table class="table category-table">
   <thead>
     <tr>
       <th>Name</th>
-      <th colspan="3"></th>
+      <th colspan="3">Actions</th>
     </tr>
   </thead>
 
@@ -14,9 +16,18 @@
     <% @categories.each do |category| %>
       <tr>
         <td><%= category.name %></td>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to category do %>
+            <i class="far fa-eye blue"></i>
+          <% end%>
+        </td>
+        <td><%= link_to edit_category_path(category) do %>
+            <i class="fas fa-pen green"></i>
+          <% end %>
+        </td>
+        <td><%= link_to category, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="fas fa-times red"></i>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +35,4 @@
 
 <br>
 
-<%= link_to 'New Category', new_category_path %>
+<%= link_to 'Adicionar Categoria', new_category_path, class: 'button is-danger is-outlined' %>
